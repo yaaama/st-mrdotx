@@ -274,7 +274,11 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_o,           opencopied,     {.v = "link_handler.sh"} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ TERMMOD,              XK_Escape,      keyboard_select,{.i =  0} },
+	{ MODKEY,               XK_k,           kscrollup,      {.i = 1}  }, /* ALT k - Scroll up */
+	{ MODKEY,               XK_j,           kscrolldown,    {.i = 1}  }, /* ALT j - Scroll down */
+	{ MODKEY,               XK_u,           kscrollup,      {.i = -1} }, /* ALT u - Scroll a page up*/
+	{ MODKEY,               XK_d,           kscrolldown,    {.i = -1} }, /* Alt d - Scroll a page down */
+	{ TERMMOD,              XK_space,       keyboard_select,{.i =  0} },
 };
 
 /*
